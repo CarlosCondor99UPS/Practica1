@@ -92,9 +92,6 @@ public class Prueba {
         int numPortadaEstructura=estructura1.getNumPortada();
         System.out.println("Numero Portada: "+numPortadaEstructura);
         System.out.println("");
-        
-        
-        
-          
+   
     }
 }
