@@ -1,10 +1,20 @@
-
 package ec.edu.ups.clases;
 
-public class Seccion {
-    private String nombre;
-    private Noticia[] noticias;
+import java.util.ArrayList;
+import java.util.List;
 
+public class Seccion {
+
+    //Declaracion de variables
+    private String nombre;
+    private List<Noticia> noticias;
+
+    //Constructor
+    public Seccion(){
+        noticias = new ArrayList<>();
+    }
+    
+    //Setters and getters de los atributos
     public String getNombre() {
         return nombre;
     }
@@ -13,13 +23,18 @@ public class Seccion {
         this.nombre = nombre;
     }
 
-    public Noticia[] getNoticias() {
+    public List<Noticia> getNoticias() {
         return noticias;
     }
 
-    public void setNoticias(Noticia[] noticias) {
+    public void setNoticias(List<Noticia> noticias) {
         this.noticias = noticias;
     }
+
     
     
+    public void agregarNoticia(Noticia noticia){
+        this.noticias.add(noticia);
+    }
+
 }

@@ -2,11 +2,13 @@ package ec.edu.ups.clases;
 
 public class RedSocial {
 
+    //Declaracion de variables
     private int codigo;
     private String nombre;
     private String url;
     private String publicaciones;
 
+    //Setters and getters de los atributos
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
@@ -30,4 +32,10 @@ public class RedSocial {
     public String getUrl() {
         return this.url;
     }
+
+    @Override
+    public String toString() {
+        return "RedSocial{" + "nombre=" + nombre + ", url=" + url + '}';
+    }
+
 }

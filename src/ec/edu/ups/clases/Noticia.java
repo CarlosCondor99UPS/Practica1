@@ -1,16 +1,18 @@
-
 package ec.edu.ups.clases;
 
 import java.util.Date;
 
-
 public class Noticia {
+
+    //Declaracion de variables
     private String titulo;
     private String autor;
-    private Date fecha;
+    private Date fechaCreacion;
     private String contenido;
+    private String lugar;
     private Multimedia multimedia;
 
+    //Setters and getters de los atributos
     public String getTitulo() {
         return titulo;
     }
@@ -25,14 +27,6 @@ public class Noticia {
 
     public void setAutor(String autor) {
         this.autor = autor;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     public String getContenido() {
@@ -50,6 +44,23 @@ public class Noticia {
     public void setMultimedia(Multimedia multimedia) {
         this.multimedia = multimedia;
     }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
     
     
+
 }

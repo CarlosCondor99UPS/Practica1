@@ -1,14 +1,16 @@
-
 package ec.edu.ups.clases;
 
 import java.util.Date;
 
 public class EstructuraPeriodico {
+
+    //Declaracion de variables
     private String nombre;
     private int numPortada;
     private String encabezado;
     private Date fecha;
 
+    //Setters and getters de los atributos
     public String getNombre() {
         return nombre;
     }
@@ -40,6 +42,5 @@ public class EstructuraPeriodico {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    
-    
+
 }

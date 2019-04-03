@@ -10,18 +10,23 @@ import java.util.Date;
 public class Prueba {
 
     public static void main(String[] args) {
+        
+        //Instancia de un objeto de clase Red Social
         RedSocial facebook = new RedSocial();
+        //Seteo de datos
         facebook.setCodigo(1);
         facebook.setNombre("Facebook");
         facebook.setUrl("www.facebook.com");
 
+        //Obtencion de datos con get y salida de datos
         int codigoFace = facebook.getCodigo();
         System.out.println("Codigo: " + codigoFace);
         String nombreFace = facebook.getNombre();
         System.out.println("Nombre: " + nombreFace);
         String urlFace = facebook.getUrl();
         System.out.println("URL: " + urlFace);
-        System.out.println("");
+        System.out.println(facebook.toString());
+        
         
         Multimedia video=new Multimedia();
         video.setFormato(".mov");
@@ -49,15 +54,25 @@ public class Prueba {
         Noticia noticia1=new Noticia();
         noticia1.setAutor("Carlos Condor");
         noticia1.setContenido("El D.Cuenca gana 3-0 al Real Madrid");
-        noticia1.setFecha(new Date());
+        noticia1.setFechaCreacion(new Date());
         noticia1.setMultimedia(video);
         noticia1.setTitulo("El D.Cuenca primero en tablas");
+        
+        Noticia noticia2=new Noticia();
+        noticia2.setAutor("don Boxco");
+        noticia2.setContenido("EL D.Cuenca golea al barcelona");
+        noticia2.setFechaCreacion(new Date());
+        noticia2.setMultimedia(video);
+        noticia2.setTitulo("El D.Cuenca gana al barcelona");
+        
+        
+        
         
         String tituloNoticia1=noticia1.getTitulo();
         System.out.println("Titulo: "+tituloNoticia1);
         String autorNoticia1=noticia1.getAutor();
         System.out.println("Autor: "+autorNoticia1);
-        Date fechaNoticia1=noticia1.getFecha();
+        Date fechaNoticia1=noticia1.getFechaCreacion();
         System.out.println("Fecha: "+fechaNoticia1);
         String contenidoNoticia1=noticia1.getContenido();
         System.out.println("Contenido: "+contenidoNoticia1);
@@ -67,14 +82,12 @@ public class Prueba {
         
         Seccion deportes=new Seccion();
         deportes.setNombre("Deportes");
-        Noticia[] noticias=new Noticia[1];
-        noticias[0]=noticia1;
-        deportes.setNoticias(noticias);
+        deportes.agregarNoticia(noticia1);
+        deportes.agregarNoticia(noticia2);
+        
         
         String nombreSeccion=deportes.getNombre();
         System.out.println("Nombre: "+nombreSeccion);
-        noticias=deportes.getNoticias();
-        System.out.println("Noticias: "+noticias);
         System.out.println("");
         
         EstructuraPeriodico estructura1=new EstructuraPeriodico();

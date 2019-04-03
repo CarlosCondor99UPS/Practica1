@@ -1,9 +1,10 @@
-
 package ec.edu.ups.clases;
 
 import java.util.Date;
 
 public class Multimedia {
+
+    //Declaracion de variables
     private String nombre;
     private String formato;
     private double tamanoBytes;
@@ -11,6 +12,7 @@ public class Multimedia {
     private Date creacion;
     private Date modificacion;
 
+    //Setters and getters de los atributos
     public String getNombre() {
         return nombre;
     }
@@ -58,6 +60,5 @@ public class Multimedia {
     public void setModificacion(Date modificacion) {
         this.modificacion = modificacion;
     }
-    
-    
+
 }
